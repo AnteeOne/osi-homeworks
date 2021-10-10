@@ -3,7 +3,6 @@ import os
 import random as rnd
 import time
 
-# Гилязов Азат Рустамович, 11-902
 
 def child(arg: int):
     pid = os.getpid()
@@ -19,7 +18,7 @@ def parent(n: int):
         child_pid = os.fork()
         if child_pid == 0:
             arg = rnd.randint(5, 10)
-            child(arg)
+            os.execl("/child.py", str(arg))
         else:
             processes.append(child_pid)
 
