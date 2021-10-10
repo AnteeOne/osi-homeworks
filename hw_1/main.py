@@ -3,6 +3,7 @@ import os
 import random as rnd
 import time
 
+# Гилязов Азат Рустамович, 11-902
 
 def child(arg: int):
     pid = os.getpid()
